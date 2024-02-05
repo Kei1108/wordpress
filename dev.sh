@@ -61,6 +61,7 @@ elif [ "$condition" = "app" ]; then
     if [ -n "$sub_condition" ]; then
       echo "docker compose exec $sub_condition bash"
       docker compose exec $sub_condition bash
+    fi
 elif [ "$condition" = "db" ]; then
     echo "docker compose exec db bash"
     docker compose exec db sh -c "mysql -utest -ptest"
